@@ -1,0 +1,30 @@
+#general{
+    background-color: floralwhite;
+    width: 900px;
+    margin: 0 auto;
+    border: 1px solid cornflowerblue;
+    padding: 10px;
+    text-align: center;
+}
+
+.rankings{
+    background-color: floralwhite;
+    width: 900px;
+    margin: 0 auto;
+    border: 1px solid cornflowerblue;
+    padding: 10px;
+    text-align: center;
+}
+
+#visitas{
+    background-color: floralwhite;
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid cornflowerblue;
+    padding: 10px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}

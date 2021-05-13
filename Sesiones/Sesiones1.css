@@ -1,0 +1,20 @@
+/* Jose Luis Delgado */
+body
+{
+
+	text-align: center;
+	background: linear-gradient(to bottom, cornflowerblue, white);
+	height: 700px;
+}
+h1
+{
+	font-weight:bold;
+	text-decoration: underline;
+}
+form{
+	padding-top: 40px;
+	border: 2px solid black;
+	width: 350px;
+	height: 200px;
+	margin-left: 463px;
+}

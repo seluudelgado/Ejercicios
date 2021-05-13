@@ -1,0 +1,56 @@
+CREATE DATABASE IF NOT EXISTS VisitasJesuitas DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+
+USE VisitasJesuitas;
+
+CREATE TABLE Lugares(
+    Ip CHAR(15) NOT NULL,
+    Nombre VARCHAR(20) NOT NULL,
+    PRIMARY KEY (Ip)
+);
+
+CREATE TABLE Jesuitas(
+    IdJesuita TINYINT UNSIGNED NOT NULL  AUTO_INCREMENT,
+    Nombre VARCHAR(50) NOT NULL,
+    NombreAlumno VARCHAR(50),
+    Firma VARCHAR(200) NOT NULL,
+    PRIMARY KEY (IdJesuita)
+);
+
+CREATE TABLE Visitas(
+    NumVisita SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    Ip CHAR(15) NOT NULL,
+    IdJesuita TINYINT UNSIGNED NOT NULL,
+    FechaHora DATETIME DEFAULT NULL,
+    PRIMARY KEY (NumVisita),
+    FOREIGN KEY FK_VisitaJesuita (IdJesuita) REFERENCES Jesuitas (IdJesuita),
+    FOREIGN KEY FK_VisitaLugares (Ip) REFERENCES Lugares (Ip)
+);
+
+-- Script para añadir datos de pruebas a la BD Viajes Jesuitas
+
+INSERT INTO lugares (Ip, Nombre) VALUES 
+        ('192.168.1.10', 'Roma'), 
+        ('192.168.1.11', 'Jerusalen'),
+        ('192.168.1.12', 'Loyola'), 
+        ('192.168.1.13', 'Azpeitia'), 
+        ('192.168.1.14', 'Manresa'), 
+        ('192.168.1.15', 'Monserrat'), 
+        ('192.168.1.16', 'Goa'),
+        ('192.168.1.17', 'Shanchuan'), 
+        ('192.168.1.18', 'Molucas'),
+        ('192.168.1.19', 'Malacca'), 
+        ('192.168.1.20', 'Cuquiarachi'), 
+        ('192.168.1.21', 'China'), 
+        ('192.168.1.22', 'Ensenada'), 
+        ('192.168.1.23', 'Guadalupe'),
+        ('192.168.1.24', 'Rosarito'), 
+        ('192.168.1.25', 'Chiquitos'),
+        ('192.168.1.26', 'Loyola'), 
+        ('192.168.1.27', 'Papúa'), 
+        ('192.168.1.28', 'China'), 
+        ('192.168.1.29', 'Misiones'), 
+        ('192.168.1.30', 'Rio Grande del Sur'),
+        ('192.168.1.31', 'Casandre');
+
+
+INSERT INTO jesuitas (Nombre, Firma) VALUES ('Francisco Javier', 'Firma Francisco Javier'), ('Pedro Fabro', 'Firma Pedro Fabro'), ('Francisco de Borja', 'Firma Francisco de Borja');

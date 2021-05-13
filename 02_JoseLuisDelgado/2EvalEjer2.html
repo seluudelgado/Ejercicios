@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<HTML>
+	<HEAD>
+		<meta charset="UTF-8">
+		<title>Examen </title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="conexion.js"></script>
+		<script>
+			$(function (){
+				$("#idfecha").datepicker();
+			});
+		</script>
+	</HEAD>
+	<BODY>
+		<FORM name="formulario">
+			<FIELDSET>
+				<LEGEND> Datos personales del usuario </LEGEND>
+				<TABLE border=0>
+
+					<TR>
+									
+						<TD><LABEL for="fila">D.N.I.: </LABEL></TD>
+						<TD><INPUT type="text" name="dni" id="iddni" /></TD>
+						<TD><INPUT type="button" name="Buscar" value="buscar" onClick="consulta()"/></TD>
+						
+					</TR>
+
+					<TR>
+
+					<TD><LABEL for="fila">Nombre: </LABEL></TD>
+						<TD><INPUT type="text" name="nombre"id="idnombre" /></TD>
+
+						<TD><LABEL for="fila">Apellidos: </LABEL></TD>
+						<TD><INPUT type="text" name="apellidos"id="idapellidos" /></TD>
+					</TR>
+
+					<TR>
+						<TD><LABEL for="fila">Fecha de Nacimento (dd/mm/aaaa): </LABEL></TD>
+						<TD><INPUT type="text" name="fechaNac" id="idfecha" /></TD>
+
+
+						<TD><LABEL for="fila">Correo electrónico: </LABEL></TD>
+						<TD><INPUT type="text" name="correo" id="idemail" /></TD>
+					</TR>
+
+					<TR>
+						<TD><LABEL for="fila">Teléfono: </LABEL></TD>
+						<TD><INPUT type="text" name="telefono" id="idtelefono" /></TD>
+
+						<TD><LABEL for="fila">Móvil: </LABEL></TD>
+						<TD><INPUT type="text" name="movil" id="idmovil" /></TD>
+					</TR>
+
+					<TR>
+						<TD><LABEL for="fila">NExp: </LABEL></TD>
+						<TD><label for="idNexp"></label><INPUT type="text" name="nExp" class="input" id ="idNexp"/></TD>
+
+
+						<TD><LABEL for="fila">Nota: </LABEL></TD>
+						<TD><INPUT type="text" name="nota" class="input" id ="idNota"/></TD>
+					</TR>
+
+					<TR>
+						<TD></TD>
+						<TD></TD>
+						<TD></TD>
+						<TD><INPUT type="button" name="Guardar" value="Guardar" onclick="guardar()"/></TD>
+					</TR>
+
+				</TABLE>
+
+			</FIELDSET>
+		</FORM>
+	</BODY>
+</HTML>

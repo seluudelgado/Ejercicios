@@ -1,0 +1,127 @@
+/*html{
+	width:1260px;
+}*/
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    font-size: 16px;
+}
+header
+{
+    background-image: url("marca.png");
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: 4.6875em;
+}
+#principal{
+    height: 37.5rem;
+}
+#nav1 nav
+{
+    clear: left;
+}
+#nav1 nav ul
+{
+    display: flex;
+    border:1px solid black;
+    list-style-type: none;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    background-color: #E20123;
+    font-weight: bold;
+
+}
+
+#nav1 nav li{
+	width:23.80952380952381%;/*300px respecto a 1260px*/
+    flex-grow:1 ;
+    border: 1px solid black;
+    height: 3.125rem;
+}
+#principal nav ul
+{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+    height: 37.5rem;
+    font-size: 1.5em;
+    color: red;
+    background-color: white;
+    font-weight: bold;
+}
+#principal #columna nav ul li
+{
+    width:99% ;/*198 respecto a 200*/
+    border: 1px solid black;
+    height: 6.875rem;
+    align-items: center;
+    padding-top: 20%;
+    flex-grow:1;
+    flex-shrink:1;
+}
+#principal nav
+{
+    float: left;
+    height: 37.5rem;
+}
+#columna
+{
+    display: flex;
+    height: 37.5rem;
+    width: 15.873015873015873015873015873016%;/*200px respecto a 1260*/
+    float: left;
+    flex-direction: column;
+}
+#principal #columna nav ul li:last-child
+{
+    flex-grow:3;
+    flex-shrink:3;
+}
+
+#contenedor
+{
+    float: left;
+    padding: 0.625em 0.79365079365079365079365079365079%;/*10px respecto a 1260*/
+    margin: 1em 3.5714285714285714285714285714286%;/*45px respecto a 1260*/
+    border: 1px solid black;
+    width:75.238095238095238095238095238095%;/*948 respecto a 1260*/
+    height: 31.25rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#nav3 nav
+{
+    clear: left;
+}
+#nav3 nav ul
+{
+    display: flex;
+    border:1px solid black;
+    list-style-type: none;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    background-color: gray;
+	font-weight: bold;
+}
+
+#nav3 nav li{
+	width:31.74603174603175%;/*400px resepcto a 1260*/
+    flex-grow:1 ;
+    border: 1px solid black;
+    height: 3.125rem;
+    flex-shrink: 1;
+}
+#nav3 nav ul li:last-child{
+	flex-shrink: 3;
+
+}
