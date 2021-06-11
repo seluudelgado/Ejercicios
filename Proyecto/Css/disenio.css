@@ -1,0 +1,193 @@
+body
+{
+    background-color: cornflowerblue;
+}
+main
+{
+    height: 70vh;
+    margin: 15vh auto;
+    background-color: white;
+    width: 60%;
+    border-radius: 40px ;
+}
+ul
+{
+  padding: 0;
+}
+li
+{
+    list-style: none;
+}
+.inicioSesion
+{
+    width: 100%;
+    padding-top: 45px;
+}
+.inicioSesion div
+{
+    width: 45%;
+    margin: 0 auto;
+}
+main>div div h1
+{
+    width: 100%;
+    text-align: center;
+}
+.submit input
+{
+    margin-top: 15px;
+}
+main>div
+{
+    width: 100%;
+    padding-top: 1.5vh;
+}
+.registro div{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.registro div.datos div
+{
+    float: left;
+    margin-top: 2vh;
+}
+.registro div.elegir
+{
+    margin-left: 30%;
+}
+.registro div.datos input
+{
+    width: 100%;
+}
+.registro div.datos div:nth-child(1)
+{
+    width: 30%;
+}
+.registro div.datos div:nth-child(2)
+{
+    width: 60%;
+}
+input[name="firma"]
+{
+    height: 4em;
+}
+.registro div .submit
+{
+    width: 100%;
+}
+.registro div .submit
+{
+    width: 10%;
+}
+.lugares #visita
+{
+    /*background-color: coral;*/
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.lugares a button
+{
+    width: 35%;
+    padding: 0.5vh 5%;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    background-color: #F56B4E;
+}
+.lugares a button:hover
+{
+    cursor: pointer;
+}
+
+.admin .botones{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.admin a
+{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 1.5vh 5%;
+    margin-top: 3vh;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1.15em;
+    background-color: bisque;
+    text-decoration: none;
+    color: unset;
+
+}
+
+.admin a:hover
+{
+    transition-duration: 0.4s;
+    cursor: pointer;
+    filter: brightness(0.8);
+}
+
+.anadir2
+{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    /*background-color: bisque;*/
+}
+.anadir2 form
+{
+    width: 100%;
+    /*background-color: aqua;*/
+    padding-top: 4vh;
+}
+.anadir2 form div#label1
+{
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.5em;
+    padding: 1vh 3%;
+}
+.anadir2 form input[name="texto"]
+{
+    width: 50%;
+    padding: 0.8vh 3%;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.anadir2 form div#submitAnadir
+{
+    width: 100%;
+    margin-top: 2.5vh;
+}
+.anadir2 form div#submitAnadir input
+{
+    width: 30%;
+    padding: 0.6vh 3%;
+    font-size: 1em;
+}
+
+.volver
+{
+    width: 80%;
+    margin: 0;
+    text-align: center;
+}
+
+.volver a
+{
+    float: right;
+    display: block;
+    width: 10%;
+    font-size: 1em;
+    padding: 0.5vh 3%;
+    border-radius: 5px;
+    border:1px solid black;
+    text-decoration: none;
+    color: unset;
+}
+
+
+
