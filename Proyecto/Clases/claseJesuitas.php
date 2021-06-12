@@ -101,7 +101,7 @@ class claseJesuitas extends clasephp
 
     function anadirLugar($anadir)
     {
-        $sql = "INSERT INTO lugares (Nombre) VALUE ('".$anadir."')";
+        $sql = "INSERT INTO lugares (Nombre) VALUES ('".$anadir."')";
         $this->realizarConsultas($sql);
         if($this->numeroError()==0)
             return true;
@@ -109,13 +109,29 @@ class claseJesuitas extends clasephp
 
     }
 
-    function anadirJesuita($anadir)
+    function anadirJesuita($nombre, $firma, $info)
     {
-        $sql = "INSERT INTO lugares (Nombre) VALUE ('".$anadir."')";
+        $sql = "INSERT INTO Jesuita (Nombre, firma) VALUES ('".$nombre."', '".$firma."')";
         $this->realizarConsultas($sql);
+
         if($this->numeroError()==0)
-            return true;
+        {
+            return $this->anadirInfoJesuita($this->insertId(), $info);
+        }
         return false;
+
+    }
+
+    function anadirInfoJesuita($id, $info)
+    {
+        foreach ($info as $item)
+        {
+            $sql="INSERT INTO informacion_j (IdJesuita, Inform) VALUES (".$id.",'".$item."')";
+            $this->realizarConsultas($sql);
+            if($this->numeroError()!=0)
+                return false;
+        }
+        return true;
 
     }
 
@@ -136,5 +152,14 @@ class claseJesuitas extends clasephp
         $this->realizarConsultas($sql);
     }
 
+    function modificarLugar($id, $nombre)
+    {
+        $sql="UPDATE lugares SET nombre='".$nombre."' WHERE IdLugar=".$id.";";
+        $this->realizarConsultas($sql);
+        if($this->numeroError()==0)
+            return true;
+        return false;
+
+    }
 }
 ?>

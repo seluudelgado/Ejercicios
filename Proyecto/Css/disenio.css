@@ -4,11 +4,12 @@ body
 }
 main
 {
-    height: 70vh;
-    margin: 15vh auto;
+    min-height: 70vh;
+    margin: 12vh auto 0;
     background-color: white;
     width: 60%;
     border-radius: 40px ;
+    padding-bottom: 3rem;
 }
 ul
 {
@@ -142,7 +143,7 @@ input[name="firma"]
     /*background-color: aqua;*/
     padding-top: 4vh;
 }
-.anadir2 form div#label1
+.anadir2 form div.label1
 {
     width: 50%;
     margin: 0 auto;
@@ -157,12 +158,12 @@ input[name="firma"]
     border-radius: 5px;
     font-size: 1em;
 }
-.anadir2 form div#submitAnadir
+.anadir2 form div.submitAnadir
 {
     width: 100%;
     margin-top: 2.5vh;
 }
-.anadir2 form div#submitAnadir input
+.anadir2 form div.submitAnadir input
 {
     width: 30%;
     padding: 0.6vh 3%;

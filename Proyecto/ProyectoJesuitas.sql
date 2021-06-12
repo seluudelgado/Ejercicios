@@ -1,8 +1,8 @@
 --
 -- Base de datos: Jesuitas
 --
-DROP DATABASE IF EXISTS user2daw_BD1-02;
-CREATE DATABASE IF NOT EXISTS user2daw_BD1-02 DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+DROP DATABASE IF EXISTS ProyJesuitas;
+CREATE DATABASE IF NOT EXISTS ProyJesuitas DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
 
 --
 -- Estructura de tabla para la tabla lugares
@@ -66,14 +66,25 @@ CREATE TABLE administrador(
   Password varchar(255)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT into administrador VALUES ('1.1.1.1', '$2y$10$y1dVACufRhqaHuDdl6ydUuXsd2Q7kLjlETM8c8VOal/H6z4fOH42u');
+
+
+
+CREATE TABLE Jesuita(
+    IdJesuita smallint UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    Nombre varchar(50),
+    Firma varchar(200)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE UNIQUE INDEX NJesuita ON Jesuita (Nombre);
+
 CREATE TABLE informacion_J(
   IdInformacion smallint UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
   IdJesuita smallint UNSIGNED NOT NULL,
   Inform varchar(200),
   constraint fk_idjesuitas_informacion
-      foreign key (IdJesuita) references maquinas(IdJesuita)
-      on delete cascade
-      on update cascade
+      foreign key (IdJesuita) references Jesuita(IdJesuita)
+          on delete cascade
+          on update cascade
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 

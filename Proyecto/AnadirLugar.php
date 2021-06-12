@@ -29,13 +29,13 @@
         </div>
         <div class="anadir2">
             <form action="AnadirLugar.php" method="post">
-                <div id="label1">
+                <div class="label1">
                     <label>Nombre</label>
                 </div>
                 <div>
                     <input type="text" name="texto">
                 </div>
-                <div id="submitAnadir">
+                <div class="submitAnadir">
                     <input type="submit" value="Añadir" name="envio">
                 </div>
                 <?php if(isset($correcto) && !$correcto):?>

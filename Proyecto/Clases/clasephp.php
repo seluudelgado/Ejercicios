@@ -31,6 +31,11 @@ require_once('conexion.php');
             return $this->mysqli->errno;
         }
 
+        function insertId()
+        {
+            return $this->mysqli->insert_id;
+        }
+
 
     }
 ?>
